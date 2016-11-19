@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NIG-TW-P7G">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PoplarStd.otf">
+            <string>PoplarStd</string>
+        </array>
+        <array key="StencilStd.otf">
+            <string>StencilStd</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokemonQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N44-X3-lnm">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-wY-mW5">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="QRh-yW-Zdj"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHSCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySX-1l-Q21">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="42"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VI-S4-lxp">
+                                        <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="42"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz'em All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKw-br-oxm">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlj-GL-cUq">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Qlj-GL-cUq" secondAttribute="height" multiplier="1:1" id="rcl-Ue-vSl"/>
+                                        </constraints>
+                                        <state key="normal" image="Icon_Settings"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.62745098039215685" green="0.14117647058823529" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Qlj-GL-cUq" firstAttribute="width" secondItem="N44-X3-lnm" secondAttribute="width" multiplier="1:15" id="3ln-GN-ztZ"/>
+                                    <constraint firstItem="NKw-br-oxm" firstAttribute="leading" secondItem="N44-X3-lnm" secondAttribute="leading" constant="16" id="B2R-9D-iFK"/>
+                                    <constraint firstItem="Qlj-GL-cUq" firstAttribute="centerY" secondItem="NKw-br-oxm" secondAttribute="centerY" id="CD1-k4-G6Y"/>
+                                    <constraint firstItem="VnF-wY-mW5" firstAttribute="leading" secondItem="N44-X3-lnm" secondAttribute="leading" id="Jdd-pP-24Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="VnF-wY-mW5" secondAttribute="trailing" id="OK5-yf-5bm"/>
+                                    <constraint firstAttribute="bottom" secondItem="VnF-wY-mW5" secondAttribute="bottom" id="TtI-vS-mfA"/>
+                                    <constraint firstItem="ySX-1l-Q21" firstAttribute="centerY" secondItem="N44-X3-lnm" secondAttribute="centerY" id="XHo-6U-oli"/>
+                                    <constraint firstItem="ySX-1l-Q21" firstAttribute="centerX" secondItem="N44-X3-lnm" secondAttribute="centerX" id="aC3-qf-yWV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qlj-GL-cUq" secondAttribute="trailing" constant="16" id="ecg-ex-idd"/>
+                                    <constraint firstItem="1VI-S4-lxp" firstAttribute="centerY" secondItem="N44-X3-lnm" secondAttribute="centerY" multiplier="0.7" id="hUt-y7-iA1"/>
+                                    <constraint firstItem="1VI-S4-lxp" firstAttribute="centerX" secondItem="N44-X3-lnm" secondAttribute="centerX" id="j3F-pI-a2S"/>
+                                    <constraint firstItem="Qlj-GL-cUq" firstAttribute="top" secondItem="N44-X3-lnm" secondAttribute="top" constant="32" id="xLw-7W-3GZ"/>
+                                    <constraint firstItem="NKw-br-oxm" firstAttribute="top" secondItem="N44-X3-lnm" secondAttribute="top" constant="32" id="z7P-T0-EvX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-ud-NfM">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cjh-ud-NfM" secondAttribute="height" multiplier="1:1" id="r5M-bp-A72"/>
+                                </constraints>
+                                <state key="normal" image="Button_Play"/>
+                                <connections>
+                                    <segue destination="fwD-TS-2cX" kind="show" id="Joc-Ag-UTf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright ©Techkids 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB1-zW-aeD">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N44-X3-lnm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1FA-4D-0aw"/>
+                            <constraint firstItem="NB1-zW-aeD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ET-89-Swd"/>
+                            <constraint firstItem="N44-X3-lnm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="780-AT-NeC"/>
+                            <constraint firstItem="cjh-ud-NfM" firstAttribute="centerY" secondItem="VnF-wY-mW5" secondAttribute="centerY" id="IEY-mY-4jJ"/>
+                            <constraint firstItem="NB1-zW-aeD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="L4v-gD-vlP"/>
+                            <constraint firstItem="cjh-ud-NfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Om1-Fk-NWr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NB1-zW-aeD" secondAttribute="bottom" constant="20" id="YWs-Ln-vtg"/>
+                            <constraint firstItem="cjh-ud-NfM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="aeY-sU-kod"/>
+                            <constraint firstAttribute="trailing" secondItem="N44-X3-lnm" secondAttribute="trailing" id="plF-C8-SNk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NB1-zW-aeD" secondAttribute="trailing" id="rZf-bv-j8L"/>
+                            <constraint firstItem="N44-X3-lnm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.625" id="y3L-bn-tmM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9lX-5u-Hde"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="141"/>
+        </scene>
+        <!--Game Scene View Controller-->
+        <scene sceneID="2Vk-yv-I8N">
+            <objects>
+                <viewController id="fwD-TS-2cX" customClass="GameSceneViewController" customModule="PokemonQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AMQ-4D-ryC"/>
+                        <viewControllerLayoutGuide type="bottom" id="pza-Yz-WFn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="End-Rq-cje">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cao-zd-tre">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rayquaza" translatesAutoresizingMaskIntoConstraints="NO" id="LVu-ZB-dgB">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="LVu-ZB-dgB" secondAttribute="height" multiplier="1:1" id="Wfk-Qr-i9c"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fj-Xe-GnW">
+                                        <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="LVu-ZB-dgB" firstAttribute="centerX" secondItem="cao-zd-tre" secondAttribute="centerX" id="7Nq-Hh-aHj"/>
+                                    <constraint firstItem="LVu-ZB-dgB" firstAttribute="height" secondItem="cao-zd-tre" secondAttribute="height" multiplier="0.7" id="8x8-wv-VkH"/>
+                                    <constraint firstItem="LVu-ZB-dgB" firstAttribute="centerY" secondItem="cao-zd-tre" secondAttribute="centerY" id="GF5-c8-rLU"/>
+                                    <constraint firstItem="7fj-Xe-GnW" firstAttribute="leading" secondItem="cao-zd-tre" secondAttribute="leading" constant="16" id="IAA-mR-a0P"/>
+                                    <constraint firstItem="7fj-Xe-GnW" firstAttribute="top" secondItem="cao-zd-tre" secondAttribute="top" constant="8" id="RlY-uu-th9"/>
+                                    <constraint firstAttribute="trailing" secondItem="7fj-Xe-GnW" secondAttribute="trailing" constant="8" id="wzU-Pz-SbA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-zL-X4s">
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps2-oD-swB" customClass="AnswerButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Right">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionAnswer:" destination="fwD-TS-2cX" eventType="touchUpInside" id="nl6-8I-vJG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbD-2E-R0Z" customClass="AnswerButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Wrong">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionAnswer:" destination="fwD-TS-2cX" eventType="touchUpInside" id="Yg1-wz-xmf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F60-67-Ofj" customClass="AnswerButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Wrong">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionAnswer:" destination="fwD-TS-2cX" eventType="touchUpInside" id="Ale-VF-0UF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2T-VA-VxX" customClass="AnswerButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Wrong">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionAnswer:" destination="fwD-TS-2cX" eventType="touchUpInside" id="RHN-2d-DPn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ps2-oD-swB" firstAttribute="leading" secondItem="ctQ-zL-X4s" secondAttribute="leading" id="5X6-uI-Kdk"/>
+                                    <constraint firstItem="o2T-VA-VxX" firstAttribute="width" secondItem="ctQ-zL-X4s" secondAttribute="width" multiplier="0.48" id="99H-sO-Gl4"/>
+                                    <constraint firstAttribute="trailing" secondItem="o2T-VA-VxX" secondAttribute="trailing" id="C1Q-df-Rpm"/>
+                                    <constraint firstAttribute="bottom" secondItem="FbD-2E-R0Z" secondAttribute="bottom" id="EGl-uG-cCE"/>
+                                    <constraint firstItem="F60-67-Ofj" firstAttribute="height" secondItem="ctQ-zL-X4s" secondAttribute="height" multiplier="0.4" id="G2O-MZ-aH1"/>
+                                    <constraint firstItem="F60-67-Ofj" firstAttribute="top" secondItem="ctQ-zL-X4s" secondAttribute="top" id="G5L-hp-V65"/>
+                                    <constraint firstItem="F60-67-Ofj" firstAttribute="width" secondItem="ctQ-zL-X4s" secondAttribute="width" multiplier="0.48" id="Inf-kc-dOk"/>
+                                    <constraint firstItem="ps2-oD-swB" firstAttribute="width" secondItem="ctQ-zL-X4s" secondAttribute="width" multiplier="0.48" id="Lfk-qC-oGR"/>
+                                    <constraint firstItem="ps2-oD-swB" firstAttribute="height" secondItem="ctQ-zL-X4s" secondAttribute="height" multiplier="0.4" id="ShA-2f-Rce"/>
+                                    <constraint firstItem="ps2-oD-swB" firstAttribute="top" secondItem="ctQ-zL-X4s" secondAttribute="top" id="YXK-5R-s8X"/>
+                                    <constraint firstItem="FbD-2E-R0Z" firstAttribute="height" secondItem="ctQ-zL-X4s" secondAttribute="height" multiplier="0.4" id="e6F-Wh-5eC"/>
+                                    <constraint firstAttribute="bottom" secondItem="o2T-VA-VxX" secondAttribute="bottom" id="eml-ea-Dzm"/>
+                                    <constraint firstItem="o2T-VA-VxX" firstAttribute="height" secondItem="ctQ-zL-X4s" secondAttribute="height" multiplier="0.4" id="fB0-JM-Fp5"/>
+                                    <constraint firstItem="FbD-2E-R0Z" firstAttribute="width" secondItem="ctQ-zL-X4s" secondAttribute="width" multiplier="0.48" id="lBu-U5-5Cu"/>
+                                    <constraint firstAttribute="trailing" secondItem="F60-67-Ofj" secondAttribute="trailing" id="uFb-XM-e8Q"/>
+                                    <constraint firstItem="FbD-2E-R0Z" firstAttribute="leading" secondItem="ctQ-zL-X4s" secondAttribute="leading" id="yQP-Sg-gQo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJz-pX-q9r">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aJz-pX-q9r" secondAttribute="height" multiplier="1:1" id="OXf-lj-lFS"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="back1600"/>
+                                <connections>
+                                    <action selector="backToMenu:" destination="fwD-TS-2cX" eventType="touchUpInside" id="Hjo-dG-jN4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPH-fS-6EG">
+                                <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1v-5T-FkL" customClass="RPCircularProgress" customModule="PokemonQuiz" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W1v-5T-FkL" secondAttribute="height" multiplier="1:1" id="vgk-0E-GPd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerTintColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwiseProgress" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="thicknessRatio">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cao-zd-tre" firstAttribute="height" secondItem="End-Rq-cje" secondAttribute="height" multiplier="1:3" id="0NR-5J-WeX"/>
+                            <constraint firstItem="ctQ-zL-X4s" firstAttribute="leading" secondItem="End-Rq-cje" secondAttribute="leadingMargin" constant="16" id="2lp-fu-SHD"/>
+                            <constraint firstItem="aJz-pX-q9r" firstAttribute="leading" secondItem="End-Rq-cje" secondAttribute="leading" constant="16" id="6vQ-bC-3oa"/>
+                            <constraint firstItem="aJz-pX-q9r" firstAttribute="width" secondItem="End-Rq-cje" secondAttribute="width" multiplier="1:15" id="9SP-sv-Zdn"/>
+                            <constraint firstItem="cao-zd-tre" firstAttribute="top" secondItem="dPH-fS-6EG" secondAttribute="bottom" constant="40" id="9ae-wg-Qd3"/>
+                            <constraint firstItem="aJz-pX-q9r" firstAttribute="top" secondItem="AMQ-4D-ryC" secondAttribute="bottom" constant="8" id="DAN-1k-9qU"/>
+                            <constraint firstItem="cao-zd-tre" firstAttribute="leading" secondItem="End-Rq-cje" secondAttribute="leadingMargin" constant="16" id="Dod-nl-Lcp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W1v-5T-FkL" secondAttribute="trailing" constant="8" id="Dyb-Ow-seA"/>
+                            <constraint firstItem="cao-zd-tre" firstAttribute="top" secondItem="AMQ-4D-ryC" secondAttribute="bottom" constant="160" id="H7Y-LE-pry"/>
+                            <constraint firstItem="ctQ-zL-X4s" firstAttribute="height" secondItem="cao-zd-tre" secondAttribute="height" multiplier="0.4" id="Hvq-Ry-eK3"/>
+                            <constraint firstItem="ctQ-zL-X4s" firstAttribute="centerX" secondItem="End-Rq-cje" secondAttribute="centerX" id="JA4-jK-HmT"/>
+                            <constraint firstItem="W1v-5T-FkL" firstAttribute="top" secondItem="AMQ-4D-ryC" secondAttribute="bottom" constant="8" id="QNe-aH-IVa"/>
+                            <constraint firstItem="W1v-5T-FkL" firstAttribute="width" secondItem="End-Rq-cje" secondAttribute="width" multiplier="1:15" id="XEa-Ka-eah"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ctQ-zL-X4s" secondAttribute="trailing" constant="16" id="Zxr-7P-2SU"/>
+                            <constraint firstItem="dPH-fS-6EG" firstAttribute="centerX" secondItem="End-Rq-cje" secondAttribute="centerX" id="dP3-Ha-KKy"/>
+                            <constraint firstItem="cao-zd-tre" firstAttribute="centerX" secondItem="End-Rq-cje" secondAttribute="centerX" id="dWR-GT-eB6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cao-zd-tre" secondAttribute="trailing" constant="16" id="lib-Uq-OOE"/>
+                            <constraint firstItem="ctQ-zL-X4s" firstAttribute="top" secondItem="cao-zd-tre" secondAttribute="bottom" constant="30" id="rvx-rD-hBj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundLayer" destination="cao-zd-tre" id="jfN-un-yS7"/>
+                        <outlet property="pokemonImage" destination="LVu-ZB-dgB" id="NjM-Rq-2OL"/>
+                        <outlet property="pokemonInfo" destination="7fj-Xe-GnW" id="o7k-r0-Zqq"/>
+                        <outlet property="progressView" destination="W1v-5T-FkL" id="x7X-gu-mQA"/>
+                        <outlet property="scoreLabel" destination="dPH-fS-6EG" id="Yzl-8D-Ajm"/>
+                        <outletCollection property="buttonGroup" destination="ps2-oD-swB" collectionClass="NSMutableArray" id="7nv-Pj-Obi"/>
+                        <outletCollection property="buttonGroup" destination="F60-67-Ofj" collectionClass="NSMutableArray" id="Iso-es-9Wj"/>
+                        <outletCollection property="buttonGroup" destination="FbD-2E-R0Z" collectionClass="NSMutableArray" id="s3q-rZ-Rsv"/>
+                        <outletCollection property="buttonGroup" destination="o2T-VA-VxX" collectionClass="NSMutableArray" id="lFp-RM-qPD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgu-Ig-fkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117.5" y="138.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uGM-AS-Rb8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="NIG-TW-P7G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="55g-IV-ooa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gob-YF-XdT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5n8-ld-ncN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="141"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button_Play" width="229" height="229"/>
+        <image name="Icon_Settings" width="177" height="177"/>
+        <image name="Rayquaza" width="125" height="125"/>
+        <image name="back1600" width="800" height="800"/>
+    </resources>
+</document>
