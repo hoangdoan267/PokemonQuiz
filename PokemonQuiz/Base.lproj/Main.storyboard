@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N44-X3-lnm">
@@ -57,7 +57,15 @@
                                             <constraint firstAttribute="width" secondItem="Qlj-GL-cUq" secondAttribute="height" multiplier="1:1" id="rcl-Ue-vSl"/>
                                         </constraints>
                                         <state key="normal" image="Icon_Settings"/>
+                                        <connections>
+                                            <segue destination="7UZ-6z-wkA" kind="show" id="PGt-BA-nTB"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXD-Bj-OuT">
+                                        <fontDescription key="fontDescription" name="StencilStd" family="Stencil Std" pointSize="42"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.62745098039215685" green="0.14117647058823529" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -67,11 +75,13 @@
                                     <constraint firstItem="VnF-wY-mW5" firstAttribute="leading" secondItem="N44-X3-lnm" secondAttribute="leading" id="Jdd-pP-24Y"/>
                                     <constraint firstAttribute="trailing" secondItem="VnF-wY-mW5" secondAttribute="trailing" id="OK5-yf-5bm"/>
                                     <constraint firstAttribute="bottom" secondItem="VnF-wY-mW5" secondAttribute="bottom" id="TtI-vS-mfA"/>
+                                    <constraint firstItem="eXD-Bj-OuT" firstAttribute="centerX" secondItem="N44-X3-lnm" secondAttribute="centerX" id="XC8-5T-ktZ"/>
                                     <constraint firstItem="ySX-1l-Q21" firstAttribute="centerY" secondItem="N44-X3-lnm" secondAttribute="centerY" id="XHo-6U-oli"/>
                                     <constraint firstItem="ySX-1l-Q21" firstAttribute="centerX" secondItem="N44-X3-lnm" secondAttribute="centerX" id="aC3-qf-yWV"/>
                                     <constraint firstAttribute="trailing" secondItem="Qlj-GL-cUq" secondAttribute="trailing" constant="16" id="ecg-ex-idd"/>
                                     <constraint firstItem="1VI-S4-lxp" firstAttribute="centerY" secondItem="N44-X3-lnm" secondAttribute="centerY" multiplier="0.7" id="hUt-y7-iA1"/>
                                     <constraint firstItem="1VI-S4-lxp" firstAttribute="centerX" secondItem="N44-X3-lnm" secondAttribute="centerX" id="j3F-pI-a2S"/>
+                                    <constraint firstItem="eXD-Bj-OuT" firstAttribute="centerY" secondItem="N44-X3-lnm" secondAttribute="centerY" multiplier="1.3" id="mNH-LM-WBU"/>
                                     <constraint firstItem="Qlj-GL-cUq" firstAttribute="top" secondItem="N44-X3-lnm" secondAttribute="top" constant="32" id="xLw-7W-3GZ"/>
                                     <constraint firstItem="NKw-br-oxm" firstAttribute="top" secondItem="N44-X3-lnm" secondAttribute="top" constant="32" id="z7P-T0-EvX"/>
                                 </constraints>
@@ -107,10 +117,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9lX-5u-Hde"/>
+                    <connections>
+                        <outlet property="currentScore" destination="1VI-S4-lxp" id="5rf-iN-rYN"/>
+                        <outlet property="gameLabel" destination="ySX-1l-Q21" id="kAf-gH-L1d"/>
+                        <outlet property="highScoreLabel" destination="eXD-Bj-OuT" id="Dvb-A6-3a5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="141"/>
+            <point key="canvasLocation" x="360.80000000000001" y="139.880059970015"/>
         </scene>
         <!--Game Scene View Controller-->
         <scene sceneID="2Vk-yv-I8N">
@@ -121,7 +136,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pza-Yz-WFn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="End-Rq-cje">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cao-zd-tre">
@@ -236,10 +251,10 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockwiseProgress" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="thicknessRatio">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -272,6 +287,7 @@
                         <outlet property="pokemonInfo" destination="7fj-Xe-GnW" id="o7k-r0-Zqq"/>
                         <outlet property="progressView" destination="W1v-5T-FkL" id="x7X-gu-mQA"/>
                         <outlet property="scoreLabel" destination="dPH-fS-6EG" id="Yzl-8D-Ajm"/>
+                        <outlet property="screenBackground" destination="End-Rq-cje" id="479-v9-9Ow"/>
                         <outletCollection property="buttonGroup" destination="ps2-oD-swB" collectionClass="NSMutableArray" id="7nv-Pj-Obi"/>
                         <outletCollection property="buttonGroup" destination="F60-67-Ofj" collectionClass="NSMutableArray" id="Iso-es-9Wj"/>
                         <outletCollection property="buttonGroup" destination="FbD-2E-R0Z" collectionClass="NSMutableArray" id="s3q-rZ-Rsv"/>
@@ -281,6 +297,213 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgu-Ig-fkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117.5" y="138.75"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="fgw-1w-RZu">
+            <objects>
+                <viewController id="7UZ-6z-wkA" customClass="SettingViewController" customModule="PokemonQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VZC-9N-wIq"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Il-5e-fc5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mTI-9q-Fbl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUq-TC-xrM">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AUq-TC-xrM" secondAttribute="height" multiplier="1:1" id="Yuf-ZJ-140"/>
+                                </constraints>
+                                <state key="normal" image="back1600"/>
+                                <connections>
+                                    <action selector="backToHome:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="Izb-q5-TcJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSn-YF-M3z">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Vm-73-HOZ">
+                                <color key="onTintColor" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei9-Uf-tkt">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-6r-5S6">
+                                <color key="onTintColor" red="0.62745098040000002" green="0.14117647059999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjQ-pg-2cu">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="aIF-Vs-4w4"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION IN QUIZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31j-eW-E6v">
+                                <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQ1-bN-xzR">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFA-VC-UGf" customClass="GeneButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SFA-VC-UGf" secondAttribute="height" multiplier="42:19" id="lXw-s1-xwo"/>
+                                        </constraints>
+                                        <state key="normal" image="Background_Gen1"/>
+                                        <connections>
+                                            <action selector="selectGene:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="s6k-Oe-pkN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA2-g8-oFE" customClass="GeneButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XA2-g8-oFE" secondAttribute="height" multiplier="42:19" id="cpv-Ag-efA"/>
+                                        </constraints>
+                                        <state key="normal" image="Background_Gen2"/>
+                                        <connections>
+                                            <action selector="selectGene:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="LBB-cx-4PT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQW-wZ-XS3" customClass="GeneButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mQW-wZ-XS3" secondAttribute="height" multiplier="42:19" id="z29-o5-Aq1"/>
+                                        </constraints>
+                                        <state key="normal" image="Background_Gen3"/>
+                                        <connections>
+                                            <action selector="selectGene:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="KfB-vs-EYR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-IB-D1H" customClass="GeneButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KnO-IB-D1H" secondAttribute="height" multiplier="42:19" id="8by-Tw-cCh"/>
+                                        </constraints>
+                                        <state key="normal" image="Background_Gen4"/>
+                                        <connections>
+                                            <action selector="selectGene:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="qi3-m5-9HW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sj-i9-iQY" customClass="GeneButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8sj-i9-iQY" secondAttribute="height" multiplier="42:19" id="KXn-bY-LeC"/>
+                                        </constraints>
+                                        <state key="normal" image="Background_Gen5"/>
+                                        <connections>
+                                            <action selector="selectGene:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="Tym-U7-Ho0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uw-xu-azl" customClass="GeneButton" customModule="PokemonQuiz" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8uw-xu-azl" secondAttribute="height" multiplier="42:19" id="pWD-GR-2uY"/>
+                                        </constraints>
+                                        <state key="normal" image="Background_Gen6"/>
+                                        <connections>
+                                            <action selector="selectGene:" destination="7UZ-6z-wkA" eventType="touchUpInside" id="hKd-rK-RtD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION I" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6Q-8P-hpw">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION II" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeF-km-84a">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION III" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMl-AJ-B0j">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION IV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssZ-by-YZm">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION V" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-tL-t4k">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERATION VI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hc-CF-D48">
+                                        <fontDescription key="fontDescription" name="PoplarStd" family="Poplar Std" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zeF-km-84a" firstAttribute="leading" secondItem="XA2-g8-oFE" secondAttribute="leading" constant="8" id="0ZH-0d-NBj"/>
+                                    <constraint firstItem="XA2-g8-oFE" firstAttribute="top" secondItem="fQ1-bN-xzR" secondAttribute="top" constant="8" id="28Z-W6-3G1"/>
+                                    <constraint firstItem="Ept-tL-t4k" firstAttribute="top" secondItem="8sj-i9-iQY" secondAttribute="top" constant="8" id="39V-Co-eCA"/>
+                                    <constraint firstItem="8sj-i9-iQY" firstAttribute="width" secondItem="SFA-VC-UGf" secondAttribute="width" id="4ew-1v-Nd5"/>
+                                    <constraint firstItem="T6Q-8P-hpw" firstAttribute="top" secondItem="SFA-VC-UGf" secondAttribute="top" constant="8" id="5Fi-xX-P1m"/>
+                                    <constraint firstItem="8uw-xu-azl" firstAttribute="width" secondItem="SFA-VC-UGf" secondAttribute="width" id="5XA-9A-6wO"/>
+                                    <constraint firstItem="mQW-wZ-XS3" firstAttribute="top" secondItem="SFA-VC-UGf" secondAttribute="bottom" constant="8" id="5l0-NM-G1a"/>
+                                    <constraint firstItem="mQW-wZ-XS3" firstAttribute="width" secondItem="SFA-VC-UGf" secondAttribute="width" id="D7c-c6-BUo"/>
+                                    <constraint firstItem="zeF-km-84a" firstAttribute="top" secondItem="XA2-g8-oFE" secondAttribute="top" constant="8" id="DUK-QR-dWy"/>
+                                    <constraint firstItem="1hc-CF-D48" firstAttribute="leading" secondItem="8uw-xu-azl" secondAttribute="leading" constant="8" id="EMi-hf-PHy"/>
+                                    <constraint firstItem="XA2-g8-oFE" firstAttribute="width" secondItem="SFA-VC-UGf" secondAttribute="width" id="FGd-hc-Bjh"/>
+                                    <constraint firstItem="SFA-VC-UGf" firstAttribute="top" secondItem="fQ1-bN-xzR" secondAttribute="top" constant="8" id="JZE-Ej-dZK"/>
+                                    <constraint firstItem="T6Q-8P-hpw" firstAttribute="leading" secondItem="fQ1-bN-xzR" secondAttribute="leading" constant="8" id="KeT-JZ-Yr3"/>
+                                    <constraint firstAttribute="trailing" secondItem="8uw-xu-azl" secondAttribute="trailing" id="OAC-M9-Bxa"/>
+                                    <constraint firstItem="8sj-i9-iQY" firstAttribute="top" secondItem="mQW-wZ-XS3" secondAttribute="bottom" constant="8" id="OMY-Lv-2Cy"/>
+                                    <constraint firstItem="8sj-i9-iQY" firstAttribute="leading" secondItem="fQ1-bN-xzR" secondAttribute="leading" id="OiI-zg-Ra6"/>
+                                    <constraint firstItem="xMl-AJ-B0j" firstAttribute="leading" secondItem="mQW-wZ-XS3" secondAttribute="leading" constant="8" id="Q1C-dz-UV2"/>
+                                    <constraint firstItem="ssZ-by-YZm" firstAttribute="top" secondItem="KnO-IB-D1H" secondAttribute="top" constant="8" id="QTr-nd-DFL"/>
+                                    <constraint firstItem="xMl-AJ-B0j" firstAttribute="top" secondItem="mQW-wZ-XS3" secondAttribute="top" constant="8" id="biu-TL-Rzc"/>
+                                    <constraint firstItem="1hc-CF-D48" firstAttribute="top" secondItem="8uw-xu-azl" secondAttribute="top" constant="8" id="e1j-mB-ZeD"/>
+                                    <constraint firstItem="8uw-xu-azl" firstAttribute="top" secondItem="KnO-IB-D1H" secondAttribute="bottom" constant="8" id="gHv-3q-MR7"/>
+                                    <constraint firstItem="KnO-IB-D1H" firstAttribute="top" secondItem="XA2-g8-oFE" secondAttribute="bottom" constant="8" id="jTO-0A-olF"/>
+                                    <constraint firstItem="ssZ-by-YZm" firstAttribute="leading" secondItem="KnO-IB-D1H" secondAttribute="leading" constant="8" id="mtE-9U-gHx"/>
+                                    <constraint firstItem="mQW-wZ-XS3" firstAttribute="leading" secondItem="fQ1-bN-xzR" secondAttribute="leading" id="nu0-Hc-Nhf"/>
+                                    <constraint firstItem="Ept-tL-t4k" firstAttribute="leading" secondItem="8sj-i9-iQY" secondAttribute="leading" constant="8" id="oo8-4E-c1Y"/>
+                                    <constraint firstItem="SFA-VC-UGf" firstAttribute="leading" secondItem="fQ1-bN-xzR" secondAttribute="leading" id="pcR-8V-MwN"/>
+                                    <constraint firstItem="SFA-VC-UGf" firstAttribute="width" secondItem="fQ1-bN-xzR" secondAttribute="width" multiplier="48:100" id="s5h-aG-Nb7"/>
+                                    <constraint firstItem="KnO-IB-D1H" firstAttribute="width" secondItem="SFA-VC-UGf" secondAttribute="width" id="sLw-6z-LKd"/>
+                                    <constraint firstAttribute="trailing" secondItem="KnO-IB-D1H" secondAttribute="trailing" id="uqm-n7-RoP"/>
+                                    <constraint firstAttribute="trailing" secondItem="XA2-g8-oFE" secondAttribute="trailing" id="wqe-3V-xq5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AUq-TC-xrM" firstAttribute="width" secondItem="mTI-9q-Fbl" secondAttribute="width" multiplier="1:15" id="5ks-D3-DFi"/>
+                            <constraint firstItem="HjQ-pg-2cu" firstAttribute="leading" secondItem="mTI-9q-Fbl" secondAttribute="leading" id="7uG-m9-wBl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fQ1-bN-xzR" secondAttribute="trailing" id="8aR-3Y-IhG"/>
+                            <constraint firstAttribute="trailing" secondItem="HjQ-pg-2cu" secondAttribute="trailing" id="Aie-kT-RfS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="31j-eW-E6v" secondAttribute="trailing" id="EQy-Ku-ETy"/>
+                            <constraint firstItem="fQ1-bN-xzR" firstAttribute="leading" secondItem="mTI-9q-Fbl" secondAttribute="leadingMargin" id="OBq-bf-t9b"/>
+                            <constraint firstItem="fQ1-bN-xzR" firstAttribute="height" secondItem="mTI-9q-Fbl" secondAttribute="height" multiplier="1:2.2" id="QYc-7B-AIQ"/>
+                            <constraint firstItem="AUq-TC-xrM" firstAttribute="top" secondItem="VZC-9N-wIq" secondAttribute="bottom" constant="8" id="Rma-jy-4wG"/>
+                            <constraint firstItem="ei9-Uf-tkt" firstAttribute="leading" secondItem="mTI-9q-Fbl" secondAttribute="leadingMargin" id="Ukb-cP-Zfm"/>
+                            <constraint firstItem="DSn-YF-M3z" firstAttribute="leading" secondItem="mTI-9q-Fbl" secondAttribute="leadingMargin" id="UlT-Da-13G"/>
+                            <constraint firstItem="5Vm-73-HOZ" firstAttribute="centerY" secondItem="DSn-YF-M3z" secondAttribute="centerY" id="VeZ-bd-Qdo"/>
+                            <constraint firstItem="fQ1-bN-xzR" firstAttribute="top" secondItem="31j-eW-E6v" secondAttribute="bottom" constant="32" id="Yg1-G6-0Ar"/>
+                            <constraint firstItem="31j-eW-E6v" firstAttribute="leading" secondItem="mTI-9q-Fbl" secondAttribute="leadingMargin" id="YhY-um-4bO"/>
+                            <constraint firstItem="DSn-YF-M3z" firstAttribute="top" secondItem="AUq-TC-xrM" secondAttribute="bottom" constant="20" id="Zwp-YA-6gz"/>
+                            <constraint firstItem="1d0-6r-5S6" firstAttribute="centerY" secondItem="ei9-Uf-tkt" secondAttribute="centerY" id="ab0-nv-jFX"/>
+                            <constraint firstItem="ei9-Uf-tkt" firstAttribute="top" secondItem="DSn-YF-M3z" secondAttribute="bottom" constant="18" id="fIV-gI-tje"/>
+                            <constraint firstItem="HjQ-pg-2cu" firstAttribute="top" secondItem="ei9-Uf-tkt" secondAttribute="bottom" constant="18" id="kOD-Y3-C2d"/>
+                            <constraint firstItem="5Vm-73-HOZ" firstAttribute="trailing" secondItem="mTI-9q-Fbl" secondAttribute="trailingMargin" id="o4l-Ni-8LV"/>
+                            <constraint firstItem="1d0-6r-5S6" firstAttribute="trailing" secondItem="mTI-9q-Fbl" secondAttribute="trailingMargin" id="qXW-Rx-tj7"/>
+                            <constraint firstItem="AUq-TC-xrM" firstAttribute="leading" secondItem="mTI-9q-Fbl" secondAttribute="leadingMargin" id="utm-HN-DFS"/>
+                            <constraint firstItem="31j-eW-E6v" firstAttribute="top" secondItem="HjQ-pg-2cu" secondAttribute="bottom" constant="18" id="xy2-d0-oAi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="geneCollection" destination="SFA-VC-UGf" collectionClass="NSMutableArray" id="7we-90-tLp"/>
+                        <outletCollection property="geneCollection" destination="XA2-g8-oFE" collectionClass="NSMutableArray" id="EWj-Tu-QOA"/>
+                        <outletCollection property="geneCollection" destination="mQW-wZ-XS3" collectionClass="NSMutableArray" id="kup-5A-fZX"/>
+                        <outletCollection property="geneCollection" destination="KnO-IB-D1H" collectionClass="NSMutableArray" id="Ugh-l2-z26"/>
+                        <outletCollection property="geneCollection" destination="8sj-i9-iQY" collectionClass="NSMutableArray" id="3aJ-nI-egG"/>
+                        <outletCollection property="geneCollection" destination="8uw-xu-azl" collectionClass="NSMutableArray" id="qzP-D4-u1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOV-ql-GYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="889"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uGM-AS-Rb8">
@@ -302,6 +525,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Background_Gen1" width="173" height="76"/>
+        <image name="Background_Gen2" width="173" height="76"/>
+        <image name="Background_Gen3" width="173" height="76"/>
+        <image name="Background_Gen4" width="173" height="76"/>
+        <image name="Background_Gen5" width="173" height="76"/>
+        <image name="Background_Gen6" width="173" height="76"/>
         <image name="Button_Play" width="229" height="229"/>
         <image name="Icon_Settings" width="177" height="177"/>
         <image name="Rayquaza" width="125" height="125"/>

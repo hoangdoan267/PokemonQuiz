@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class AnswerButton: UIButton {
+    
+    var pokemon: Pokemon?
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         self.clipsToBounds = true

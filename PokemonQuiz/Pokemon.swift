@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Pokemon {
+    var pokemonID: Int?
+    var pokemonName: String?
+    var pokemonImg: String?
+    var pokemonColor: String?
+    var pokemonGene: String?
+    var pokemonTag:String?
+    
+    
+}
+

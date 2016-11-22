@@ -9,7 +9,26 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    
+    
+    @IBOutlet var geneCollection: [GeneButton]!
 
+
+    @IBAction func backToHome(_ sender: AnyObject) {
+         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func selectGene(_ sender: UIButton) {
+       
+        if (sender.alpha < 1) {
+            sender.alpha = 1
+        } else {
+            sender.alpha = 0.5
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

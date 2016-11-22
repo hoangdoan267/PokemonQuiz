@@ -9,6 +9,11 @@
 import UIKit
 
 class GeneButton: UIButton {
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        self.alpha = 0.5
+    }
 
     /*
     // Only override draw() if you perform custom drawing.
